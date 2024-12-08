@@ -1,0 +1,9 @@
+{% extends 'sales/base.html' %}
+
+{% block content %}
+<h1>Информация о покупателе</h1>
+<p>Имя: {{ customer.first_name }} {{ customer.last_name }}</p>
+<p>Телефон: {{ customer.phone_number }}</p>
+<p>Email: {{ customer.email }}</p>
+<a href="{% url 'customer-list' %}">Назад к списку покупателей</a>
+{% endblock %}

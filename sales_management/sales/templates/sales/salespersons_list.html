@@ -1,0 +1,12 @@
+{% extends 'sales/base.html' %}
+
+{% block content %}
+<h1>Продавцы</h1>
+<ul>
+    {% for salesperson in salespersons %}
+        <li><a href="{% url 'salesperson-detail' salesperson.pk %}">{{ salesperson }}</a></li>
+    {% empty %}
+        <li>Нет продавцов.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

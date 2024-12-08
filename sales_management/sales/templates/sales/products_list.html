@@ -1,0 +1,12 @@
+{% extends 'sales/base.html' %}
+
+{% block content %}
+<h1>Товары</h1>
+<ul>
+    {% for product in products %}
+        <li><a href="{% url 'product-detail' product.pk %}">{{ product }}</a></li>
+    {% empty %}
+        <li>Нет товаров.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

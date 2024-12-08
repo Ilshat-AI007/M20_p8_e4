@@ -1,0 +1,14 @@
+{% extends 'sales/base.html' %}
+
+{% block content %}
+<h1>Информация о продавце</h1>
+<p>Имя: {{ salesperson.first_name }} {{ salesperson.last_name }}</p>
+<p>Позиция: {{ salesperson.position }}</p>
+<p>Дата найма: {{ salesperson.hire_date|date:"d-m-Y" }}</p>
+<p>Контакты:</p>
+<ul>
+    <li>Телефон: {{ salesperson.phone_number }}</li>
+    <li>Email: {{ salesperson.email }}</li>
+</ul>
+<a href="{% url 'salesperson-list' %}">Назад к списку продавцов</a>
+{% endblock %}

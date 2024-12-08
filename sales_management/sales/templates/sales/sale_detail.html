@@ -1,0 +1,11 @@
+{% extends 'sales/base.html' %}
+
+{% block content %}
+<h1>Детальная информация о продаже</h1>
+<p>Покупатель: {{ sale.customer }}</p>
+<p>Продавец: {{ sale.seller }}</p>
+<p>Товар: {{ sale.product }}</p>
+<p>Дата продажи: {{ sale.sale_date|date:"d-m-Y" }}</p>
+<p>Сумма: {{ sale.amount }}</p>
+<a href="{% url 'sale-list' %}">Назад к списку продаж</a>
+{% endblock %}
